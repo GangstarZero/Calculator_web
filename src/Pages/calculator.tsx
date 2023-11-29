@@ -23,7 +23,7 @@ export const Calc = () => {
       equalTap = 0;
       opCount = 0;
     }
-  
+  // hi
     const calculating = (value: string) => {
       if(operator.includes(value) && calculate === ''
         || operator.includes(value) && operator.includes(calculate.slice(-1)))
