@@ -31,12 +31,9 @@ export const SupportForm: React.FC<SupportFormProps> = ({ setPage1 }) => {
     nav1("/");
   };
 
-  function setPage() {
-    if (nameFirst == "" && nameLast == "" && email == "" && problem == "") {
-      return;
-    }
-    setPage1(true);
-  }
+  const randomNum = (min: any, max: any) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
 
   const handleChange = (event: any) => {
     switch (event.target.name) {
@@ -55,10 +52,25 @@ export const SupportForm: React.FC<SupportFormProps> = ({ setPage1 }) => {
     }
   };
 
+  function setPage() {
+    if(randomNum(1,10) < 4)
+    {
+      window.alert("Failed to Send, Try Again!");
+      return;
+    }
+    if (nameFirst != "" && nameLast != "" && email != "" && problem != "") {
+      setPage1(true);
+    } else {
+      return;
+    }
+  }
+
   useEffect(() => {
-    setIsActive(
-      nameFirst != "" && nameLast != "" && email != "" && problem != ""
-    );
+    if (nameFirst != "" && nameLast != "" && email != "" && problem != "") {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
   });
 
   return (

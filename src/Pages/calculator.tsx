@@ -102,7 +102,7 @@ export const Calc = () => {
           ?
         </CalcButton>
         <CalcButton
-          style={{ backgroundColor: "" }}
+          style={{ backgroundColor: "orange" }}
           onClick={() => calculating("/")}
         >
           /
@@ -111,7 +111,7 @@ export const Calc = () => {
         <CalcButton onClick={() => calculating("2")}>2</CalcButton>
         <CalcButton onClick={() => calculating("3")}>3</CalcButton>
         <CalcButton
-          style={{ backgroundColor: "" }}
+          style={{ backgroundColor: "orange" }}
           onClick={() => calculating("*")}
         >
           x
@@ -120,7 +120,7 @@ export const Calc = () => {
         <CalcButton onClick={() => calculating("5")}>5</CalcButton>
         <CalcButton onClick={() => calculating("6")}>6</CalcButton>
         <CalcButton
-          style={{ backgroundColor: "" }}
+          style={{ backgroundColor: "orange" }}
           onClick={() => calculating("-")}
         >
           -
@@ -129,7 +129,7 @@ export const Calc = () => {
         <CalcButton onClick={() => calculating("8")}>8</CalcButton>
         <CalcButton onClick={() => calculating("9")}>9</CalcButton>
         <CalcButton
-          style={{ backgroundColor: "" }}
+          style={{ backgroundColor: "orange" }}
           onClick={() => calculating("+")}
         >
           +
