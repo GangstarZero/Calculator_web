@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Textfit } from 'react-textfit';
 import { useNavigate } from "react-router-dom";
+import './calculator.css'
 
 let equalTap = 0;
 let opCount = 0;
@@ -10,6 +11,7 @@ let i = 1;
 export const Calc = () => {
     let[calculate, setCalc] = useState("");
     const[result, setResult] = useState("");
+
     const nav1 = useNavigate();
     const navToSupport = () => {
         nav1("/support");
@@ -23,7 +25,7 @@ export const Calc = () => {
       equalTap = 0;
       opCount = 0;
     }
-  // hi
+
     const calculating = (value: string) => {
       if(operator.includes(value) && calculate === ''
         || operator.includes(value) && operator.includes(calculate.slice(-1)))

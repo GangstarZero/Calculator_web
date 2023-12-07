@@ -1,18 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Calc } from './Pages/calculator'
-import { Support } from './Pages/support'
-
-let equalTap = 0;
-let opCount = 0;
-const history = ["0"];
-let i = 1;
+import { SupportPage } from './Pages/supportPage'
 
 function App() {
   return(
     <Router>
       <Routes>
         <Route path="/" element={<Calc/>}></Route>
-        <Route path="/support" element={<Support/>}></Route>
+        <Route path="/support" element={<SupportPage />}></Route>
       </Routes>
     </Router>
   )
