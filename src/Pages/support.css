@@ -40,6 +40,14 @@ hr{
     color: red;
 }
 
+input:hover{
+    border: 1px orange solid;
+}
+
+textarea:hover{
+    border: 1px orange solid;
+}
+
 .inputBox{
     margin-left: 2vw;
     display: flex;

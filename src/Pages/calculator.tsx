@@ -3,10 +3,10 @@ import { Textfit } from 'react-textfit';
 import { useNavigate } from "react-router-dom";
 import './calculator.css'
 
-let equalTap = 0;
-let opCount = 0;
 const history = ["0"];
 let i = 1;
+let equalTap = 0;
+let opCount = 0;
 
 export const Calc = () => {
     let[calculate, setCalc] = useState("");
@@ -17,7 +17,9 @@ export const Calc = () => {
         nav1("/support");
     }
     
-  
+  console.log(equalTap);
+  console.log(opCount);
+
     const operator = ['/', '*', '+', '-'];
   
     const reset = () =>{
@@ -53,7 +55,11 @@ export const Calc = () => {
     }
   
     const hasil = () => {
-      
+      let opOrNot = calculate.charAt(calculate.length-1);
+      if(operator.includes(opOrNot))
+      {
+        return;
+      }
       try{
         setCalc(eval(calculate).toString());
         opCount = 0;
@@ -72,7 +78,11 @@ export const Calc = () => {
       {
         return;
       }
-  
+      let opOrNot = calculate.charAt(calculate.length-1);
+      if(operator.includes(opOrNot))
+      {
+        opCount = 0;
+      }
       const value = calculate.slice(0, -1);
   
       setCalc(value);
@@ -91,8 +101,8 @@ export const Calc = () => {
         
         <div className="calcbox">
           <button className="calcbutton" onClick={reset}>C</button>
-          <button className="calcbutton" onClick={deleteSeq}>Del</button>
-          <button className="calcbutton" onClick={navToSupport}>?</button>
+          <button className="calcbutton" onClick={deleteSeq}>DEL</button>
+          <button className="calcbutton support" onClick={navToSupport}>?</button>
           <button className="operator calcbutton" onClick={() => calculating('/')}>/</button>
           <button className="calcbutton" onClick={() => calculating('1')}>1</button>
           <button className="calcbutton" onClick={() => calculating('2')}>2</button>
