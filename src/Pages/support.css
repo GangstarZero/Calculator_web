@@ -1,8 +1,8 @@
 
 .Box{
     border: 1px white solid;
-    width: 45vw;
-    height: 31vw;
+    width: 48vw;
+    height: 33vw;
     background-color: black;
     border-radius: 20px;
 }
@@ -11,8 +11,8 @@
     border: none;
     margin-left: 2vw;
     margin-top: 0.8vw;
-    height: 1.5vw;
-    width: 4vw;
+    height: 1.9vw;
+    width: 6vw;
     border-radius: 2vw;
     cursor: pointer;
 }
@@ -33,7 +33,7 @@ hr{
     display: flex;
     gap: 10px;
     margin-left: 2vw;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .req{
@@ -64,7 +64,7 @@ textarea:hover{
 .nameLabelBox{
     display: flex;
     margin-left: 2vw;
-    gap:8.2vw;
+    gap:9.8vw;
 }
 
 .nameLabel{
