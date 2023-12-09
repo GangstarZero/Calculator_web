@@ -10,6 +10,7 @@ function App() {
         <Route path="/support" element={<SupportPage />}></Route>
       </Routes>
     </Router>
+    // hi
   )
 }
 
